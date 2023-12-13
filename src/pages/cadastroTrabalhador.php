@@ -1,31 +1,37 @@
-<?php include('partials/header-pages.php'); ?>
+<?php include('partials/header-pages.php'); ?> 
 
-<h1>cadastro Trabalhador</h1> 
-
-<form>
-  <fieldset disabled>
-    <legend>Disabled fieldset example</legend>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">Disabled input</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-    </div>
-    <div class="mb-3">
-      <label for="disabledSelect" class="form-label">Disabled select menu</label>
-      <select id="disabledSelect" class="form-select">
-        <option>Disabled select</option>
-      </select>
-    </div>
-    <div class="mb-3">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-        <label class="form-check-label" for="disabledFieldsetCheck">
-          Can't check this
-        </label>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </fieldset>
-</form>
+<div class="container mt-5">
+    <h2>Cadastrar trabalhador</h2>
+    <form>
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" placeholder="Digite o nome do trabalhador">
+        </div>
+        <div class="form-group">
+            <label for="motivoContato">Cargo:</label>
+            <select class="form-control" id="motivoContato">
+                <option value="" disabled selected>Selecione um cargo</option>
+                <option value="duvida">teste</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="motivoContato">Turno:</label>
+            <select class="form-control" id="motivoContato">
+                <option value="" disabled selected>Selecione um turno</option>
+                <option value="duvida">teste</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="motivoContato">Setor:</label>
+            <select class="form-control" id="motivoContato">
+                <option value="" disabled selected>Selecione um setor</option>
+                <option value="duvida">teste</option>
+            </select>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Cadastrar novo trabalhador</button>
+    </form>
+</div>
 
 <?php include('partials/footer.php'); ?>
 

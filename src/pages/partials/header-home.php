@@ -50,5 +50,3 @@
             </div>
         </div>
     </header>
-
-    <h1>Página home</h1>
