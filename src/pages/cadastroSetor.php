@@ -1,4 +1,6 @@
-<?php include('partials/header-pages.php'); ?>
+<?php 
+    include('partials/header-pages.php'); 
+?>
 
 <div class="container mt-5">
     <h2>Cadastrar setor</h2>
