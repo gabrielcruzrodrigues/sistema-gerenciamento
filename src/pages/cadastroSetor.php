@@ -2,10 +2,11 @@
 
 <div class="container mt-5">
     <h2>Cadastrar setor</h2>
-    <form>
+    <form action="../controller/setorController.php" method="POST">
+        <input type="hidden" name="action" value="create">
         <div class="form-group">
             <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nome" placeholder="Digite o nome do setor">
+            <input type="text" class="form-control" name="name" placeholder="Digite o nome do setor">
         </div>
         <button type="submit" class="btn btn-primary">Cadastrar novo setor</button>
     </form>
