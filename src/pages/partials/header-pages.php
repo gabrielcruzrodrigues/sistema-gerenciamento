@@ -48,6 +48,7 @@
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="../pages/cadastroTrabalhador.php">cadastrar trabalhador</a>
                                         <a class="dropdown-item" href="../pages/cadastroCargo.php">cadastrar cargo</a>
+                                        <a class="dropdown-item" href="../pages/cadastroTurno.php">cadastrar turno</a>
                                         <a class="dropdown-item" href="../pages/cadastroSetor.php">cadastrar setor</a>
                                     </div>
                                 </li>
