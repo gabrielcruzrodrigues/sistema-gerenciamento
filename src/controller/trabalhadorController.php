@@ -13,7 +13,7 @@
                 break;
             }
 
-            // $sql_verify = "SELECT * FROM turno WHERE cargo_id=".$cargo;
+            // $sql_verify = "SELECT * FROM trabalhador WHERE cargo_id=".$cargo;
             // $res_verify = $conn->query($sql_verify);
             // $turno_verify = $fetch_assoc();
 
