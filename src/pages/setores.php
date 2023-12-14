@@ -1,6 +1,39 @@
-<?php include('partials/header-pages.php'); ?>
+<?php
+    include('partials/header-pages.php'); 
+    include("../db/conexao.php"); 
+    $sql = "SELECT * FROM setor";
+    $res = $conn->query($sql);
 
-<div class="container mt-5 d-flex justify-content-left">
+    if ($res->num_rows > 0) {
+            print "<table class='table table-hover table-striped table-bordered'>";
+            print "<tr>";
+            print "<th>id</th>";
+            print "<th>nome</th>";
+            print "<th>ações</th>";
+            print "</tr>";
+        while($row = $res->fetch_object()) {
+            print "<tr>";
+            print "<td>".$row->id."</td>";
+            print "<td>".$row->name."</td>";
+            print "<td>
+                        <button onclick=\"location.href='editarSetor.php?id=".$row->id."';\" class='btn btn-success'>editar</button>
+                        
+                        <button onclick=\"
+                        if(confirm('Tem certeza que deseja excluir?')){
+                            location.href='../controller/setorController.php?action=delete&id=".$row->id."';
+                        }else{false}\" 
+                        class='btn btn-danger'>deletar</button>
+
+                    </td>";
+            print "</tr>";
+        }
+        print "</table>";
+    } else {
+        print "<p class='alert alert-danger'>Não foram encontrados resultados</p>";
+    }
+ ?>
+
+<!-- <div class="container mt-5 d-flex justify-content-left">
     <div class="card" style="width: 18rem; margin-right: 20px;">
         <div class="card-body">
             <h3 class="card-title">Setor teste 1</h3>
@@ -41,6 +74,6 @@
             <a href="#" class="btn btn-primary">Ver mais detalhes</a>
         </div>
     </div>
-</div>
+</div> -->
 
 <?php include('partials/footer.php'); ?>
