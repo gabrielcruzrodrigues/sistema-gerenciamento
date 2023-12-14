@@ -6,6 +6,12 @@
             $name = $_POST["name"];
             $cargo = $_POST["cargo"];
 
+            if ($name == '') {
+                print "<script>alert('O nome não pode estar nulo');</script>";
+                print "<script>location.href='../pages/cadastroTurno.php';</script>";
+                break;
+            }
+
             $sql_verify = "SELECT * FROM turno WHERE cargo_id=".$cargo;
             $res_verify = $conn->query($sql_verify);
             $rows = $res_verify->num_rows;
@@ -23,7 +29,7 @@
                 }
             } else {
                 print "<script>alert('Este cargo já possui os 3 cargos possíveis');</script>";
-                    print "<script>location.href='../pages/setores.php';</script>";
+                print "<script>location.href='../pages/setores.php';</script>";
             }
             break;
 }
